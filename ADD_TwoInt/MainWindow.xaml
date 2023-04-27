@@ -1,0 +1,40 @@
+﻿<Window x:Class="ADD_TwoInt.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:ADD_TwoInt"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="300" Width="500">
+    
+
+    <Grid>
+
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition />
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <StackPanel >
+            <Label Margin="10" FontSize="18" HorizontalAlignment="Center" Content="Addition"/>
+        </StackPanel>
+        <StackPanel Margin="5" Grid.Row="1">
+            <Label Content="Input A - "/>
+            <TextBox Text="{Binding input1, ValidatesOnDataErrors=True}" />
+            <Label Content="Input B - "/>
+            <TextBox Text="{Binding input2}" />
+            <Label Content="Output - "/>
+            <TextBlock Text="{Binding output3}"/>
+            <Button Margin="20" Width="250" Command="{Binding AddCommand}"  Content="ADD"/>
+        </StackPanel>
+
+        <StatusBar Grid.Row="2">
+            <StatusBarItem HorizontalAlignment="Center"  Content="Addition Operation"/>
+        </StatusBar>
+
+    </Grid>
+
+
+
+</Window>
